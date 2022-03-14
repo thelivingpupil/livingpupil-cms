@@ -72,3 +72,4 @@ yarn.lock
 
 # Generated files
 dist/
+node_modules
