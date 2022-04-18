@@ -5,9 +5,19 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import document schemas
-import page from './documents/page';
+import pages from './documents/pages';
+import curriculum from './documents/curriculum';
+import courses from './documents/courses';
+import gradeTypes from './documents/grade-types';
+import shopItems from './documents/shop-items';
+import schoolFees from './documents/school-fees';
 // We import object schemas
+import gradeLevels from './objects/grade-types/grade-levels';
 import hero from './objects/page-sections/hero';
+import annual from './objects/payment-terms/annual';
+import semiAnnual from './objects/payment-terms/semi-annual';
+import quarterly from './objects/payment-terms/quarterly';
+import monthly from './objects/payment-terms/monthly';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,9 +28,19 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    page,
+    pages,
+    curriculum,
+    gradeTypes,
+    courses,
+    schoolFees,
+    shopItems,
     // The following are object types which will appear
     // in the studio.
     hero,
+    gradeLevels,
+    annual,
+    semiAnnual,
+    quarterly,
+    monthly,
   ]),
 });

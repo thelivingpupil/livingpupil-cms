@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "The Living Pupil"
+    "name": "Living Pupil"
   },
   "api": {
     "projectId": "fu27fy1m",
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
