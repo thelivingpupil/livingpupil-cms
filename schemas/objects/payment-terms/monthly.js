@@ -1,7 +1,10 @@
+import { FaCalendarAlt } from 'react-icons/fa';
+
 export default {
   name: 'monthly',
   title: 'Monthly Fee',
   type: 'object',
+  icon: FaCalendarAlt,
   fields: [
     {
       name: 'initialFee',
@@ -36,6 +39,10 @@ export default {
         style: 'currency',
         currency: 'PHP',
       }).format(selection.staggered)} monthly)`,
+      subtitle: `Total: ${new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'PHP',
+      }).format(selection.fee + selection.misc + selection.staggered * 8)}`,
     }),
   },
 };

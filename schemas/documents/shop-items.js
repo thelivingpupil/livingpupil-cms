@@ -1,7 +1,10 @@
+import { FaShoppingCart } from 'react-icons/fa';
+
 export default {
   name: 'shopItems',
   title: 'Shop Items',
   type: 'document',
+  icon: FaShoppingCart,
   fields: [
     {
       name: 'code',

@@ -1,7 +1,10 @@
+import { FaPollH } from 'react-icons/fa';
+
 export default {
   name: 'gradeTypes',
   title: 'Grade Types',
   type: 'document',
+  icon: FaPollH,
   fields: [
     {
       name: 'code',

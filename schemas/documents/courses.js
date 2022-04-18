@@ -1,7 +1,10 @@
+import { FaCertificate } from 'react-icons/fa';
+
 export default {
   name: 'courses',
   title: 'Courses',
   type: 'document',
+  icon: FaCertificate,
   fields: [
     {
       name: 'code',

@@ -1,7 +1,10 @@
+import { FaMoneyBillWave } from 'react-icons/fa';
+
 export default {
   name: 'schoolFees',
   title: 'School Fees',
   type: 'document',
+  icon: FaMoneyBillWave,
   fields: [
     {
       name: 'name',

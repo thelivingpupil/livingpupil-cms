@@ -1,7 +1,10 @@
+import { FaDesktop } from 'react-icons/fa';
+
 export default {
   name: 'pages',
   title: 'Website Pages',
   type: 'document',
+  icon: FaDesktop,
   fields: [
     {
       name: 'title',

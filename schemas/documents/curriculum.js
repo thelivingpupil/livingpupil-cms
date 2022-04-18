@@ -1,7 +1,10 @@
+import { FaChalkboardTeacher } from 'react-icons/fa';
+
 export default {
   name: 'curriculum',
   title: 'Curriculum',
   type: 'document',
+  icon: FaChalkboardTeacher,
   fields: [
     {
       name: 'code',

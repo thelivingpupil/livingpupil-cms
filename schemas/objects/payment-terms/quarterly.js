@@ -1,7 +1,10 @@
+import { FaCalendarDay } from 'react-icons/fa';
+
 export default {
   name: 'quarterly',
   title: 'Quarterly Fee',
   type: 'object',
+  icon: FaCalendarDay,
   fields: [
     {
       name: 'initialFee',
@@ -36,6 +39,10 @@ export default {
         style: 'currency',
         currency: 'PHP',
       }).format(selection.staggered)} quarterly)`,
+      subtitle: `Total: ${new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'PHP',
+      }).format(selection.fee + selection.misc + selection.staggered * 3)}`,
     }),
   },
 };

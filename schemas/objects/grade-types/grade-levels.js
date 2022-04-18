@@ -1,7 +1,10 @@
+import { FaGraduationCap } from 'react-icons/fa';
+
 export default {
   name: 'gradeLevels',
   title: 'Grade Levels',
   type: 'object',
+  icon: FaGraduationCap,
   fields: [
     {
       name: 'code',
