@@ -26,5 +26,11 @@ export default {
       title: 'Video Link',
       type: 'url',
     },
+    {
+      name: 'lessons',
+      title: 'Lessons',
+      type: 'array',
+      of: [{ type: 'lesson' }],
+    },
   ],
 };

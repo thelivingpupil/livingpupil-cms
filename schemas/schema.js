@@ -18,6 +18,7 @@ import annual from './objects/payment-terms/annual';
 import semiAnnual from './objects/payment-terms/semi-annual';
 import quarterly from './objects/payment-terms/quarterly';
 import monthly from './objects/payment-terms/monthly';
+import lesson from './objects/lessons/lesson';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,5 +43,6 @@ export default createSchema({
     semiAnnual,
     quarterly,
     monthly,
+    lesson,
   ]),
 });
