@@ -1,6 +1,6 @@
 export default {
-  name: 'hero',
-  title: 'Hero Section',
+  name: 'footer',
+  title: 'Footer',
   type: 'object',
   fields: [
     {

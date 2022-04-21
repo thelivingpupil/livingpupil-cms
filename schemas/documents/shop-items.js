@@ -61,4 +61,19 @@ export default {
       type: 'number',
     },
   ],
+  preview: {
+    select: {
+      name: 'name',
+      price: 'price',
+      image: 'image',
+    },
+    prepare: (selection) => ({
+      title: selection.name,
+      subtitle: `Price: ${new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'PHP',
+      }).format(selection.price)}`,
+      media: selection.image,
+    }),
+  },
 };

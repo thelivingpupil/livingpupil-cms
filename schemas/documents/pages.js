@@ -7,6 +7,11 @@ export default {
   icon: FaDesktop,
   fields: [
     {
+      name: 'index',
+      title: 'Is this the landing page?',
+      type: 'boolean',
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -23,9 +28,26 @@ export default {
     },
     {
       name: 'content',
-      type: 'array',
       title: 'Content',
-      of: [{ type: 'hero' }],
+      type: 'array',
+      description: 'Add sections to your page',
+      of: [
+        {
+          type: 'reference',
+          to: { type: 'sections' },
+        },
+      ],
     },
   ],
+  initialValue: { index: false },
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug',
+    },
+    prepare: (selection) => ({
+      title: selection.title,
+      subtitle: `/${selection.slug?.current || ''}`,
+    }),
+  },
 };
