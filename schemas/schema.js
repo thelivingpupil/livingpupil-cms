@@ -21,6 +21,7 @@ import gradeLevels from './objects/grade-types/grade-levels';
 import footer from './objects/page-sections/footer';
 import header from './objects/page-sections/header';
 import hero from './objects/page-sections/hero';
+import richText from './objects/page-sections/rich-text';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -33,6 +34,7 @@ import lesson from './objects/lessons/lesson';
 
 // Common
 import link from './objects/page-sections/common/link';
+import title from './objects/page-sections/title';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -61,6 +63,8 @@ export default createSchema({
     lesson,
     header,
     footer,
+    richText,
+    title,
     // The following are common object components
     link,
   ]),

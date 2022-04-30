@@ -17,7 +17,13 @@ export default {
       type: 'array',
       description: 'Choose only ONE type for this section',
       validation: (Rule) => Rule.length(1),
-      of: [{ type: 'header' }, { type: 'hero' }, { type: 'footer' }],
+      of: [
+        { type: 'header' },
+        { type: 'hero' },
+        { type: 'footer' },
+        { type: 'richText' },
+        { type: 'title' },
+      ],
     },
   ],
 };
