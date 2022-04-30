@@ -34,7 +34,7 @@ import lesson from './objects/lessons/lesson';
 
 // Common
 import link from './objects/page-sections/common/link';
-import title from './objects/page-sections/title';
+import heroItem from './objects/page-sections/common/hero-item';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -64,8 +64,8 @@ export default createSchema({
     header,
     footer,
     richText,
-    title,
     // The following are common object components
     link,
+    heroItem,
   ]),
 });

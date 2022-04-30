@@ -22,7 +22,6 @@ export default {
         { type: 'hero' },
         { type: 'footer' },
         { type: 'richText' },
-        { type: 'title' },
       ],
     },
   ],

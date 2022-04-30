@@ -1,64 +1,52 @@
-import { FaLink } from 'react-icons/fa';
-
-const iconsList = ['facebook', 'youtube', 'instagram', 'twitter', 'custom'];
+import { FaImage } from 'react-icons/fa';
 
 export default {
-  name: 'link',
-  title: 'Link',
+  name: 'heroItem',
+  title: 'Hero Item',
   type: 'object',
-  icon: FaLink,
+  icon: FaImage,
   fields: [
     {
-      name: 'isExternal',
-      title: 'Opens in a new page?',
-      type: 'boolean',
-    },
-    {
-      name: 'hasIcon',
-      title: 'Has icon?',
-      type: 'boolean',
-    },
-    {
-      name: 'icon',
-      title: 'Icon',
-      type: 'string',
-      hidden: ({ parent }) => !parent?.hasIcon,
-      options: { list: iconsList },
-    },
-    {
-      name: 'name',
-      title: 'Text',
-      type: 'string',
-    },
-    {
-      name: 'path',
-      title: 'URL',
-      type: 'url',
-      hidden: ({ parent }) => parent?.hasChildLinks,
-      validation: (Rule) =>
-        Rule.uri({
-          allowRelative: true,
-          relativeOnly: false,
-        }),
-    },
-    {
-      name: 'hasChildLinks',
-      title: 'Has child links?',
-      type: 'boolean',
-    },
-    {
-      name: 'childLinks',
-      title: 'Child Links',
+      name: 'title',
+      title: 'Title',
       type: 'array',
-      hidden: ({ parent }) => !parent?.hasChildLinks,
-      description: 'The child navigation of your header',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'subtext',
+      title: 'Sub-text',
+      type: 'array',
+      of: [{ type: 'block' }],
+    },
+    {
+      name: 'cta',
+      title: 'Call To Action',
+      type: 'array',
       of: [{ type: 'link' }],
     },
+    {
+      name: 'image',
+      title: 'Hero Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternate Text',
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
+    },
   ],
-  initialValue: {
-    hasIcon: false,
-    icon: iconsList[0],
-    hasChildLinks: false,
-    isExternal: false,
+  preview: {
+    select: {
+      title: 'title',
+    },
+    prepare: (selection) => ({ title: selection.title.join(' ') }),
   },
 };

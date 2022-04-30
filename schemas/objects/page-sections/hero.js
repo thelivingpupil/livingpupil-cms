@@ -2,7 +2,7 @@ import { FaPuzzlePiece } from 'react-icons/fa';
 
 export default {
   name: 'hero',
-  title: 'Hero Section',
+  title: 'Hero',
   type: 'object',
   icon: FaPuzzlePiece,
   fields: [
@@ -10,6 +10,12 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+    },
+    {
+      name: 'items',
+      title: 'Hero Items',
+      type: 'array',
+      of: [{ type: 'heroItem' }],
     },
   ],
 };
