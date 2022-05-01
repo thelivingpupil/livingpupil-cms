@@ -25,6 +25,7 @@ import richText from './objects/page-sections/rich-text';
 import info from './objects/page-sections/info';
 import video from './objects/page-sections/video';
 import services from './objects/page-sections/services';
+import contact from './objects/page-sections/contact';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -72,6 +73,7 @@ export default createSchema({
     info,
     video,
     services,
+    contact,
     // The following are common object components
     link,
     heroItem,

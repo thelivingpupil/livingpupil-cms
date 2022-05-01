@@ -18,6 +18,7 @@ export default {
       description: 'Choose only ONE type for this section',
       validation: (Rule) => Rule.length(1),
       of: [
+        { type: 'contact' },
         { type: 'footer' },
         { type: 'header' },
         { type: 'hero' },
