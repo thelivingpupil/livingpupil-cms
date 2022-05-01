@@ -26,6 +26,7 @@ import info from './objects/page-sections/info';
 import video from './objects/page-sections/video';
 import services from './objects/page-sections/services';
 import contact from './objects/page-sections/contact';
+import features from './objects/page-sections/features';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -41,6 +42,7 @@ import link from './objects/page-sections/common/link';
 import heroItem from './objects/page-sections/common/hero-item';
 import resource from './objects/page-sections/common/resource';
 import service from './objects/page-sections/common/service';
+import featureItem from './objects/page-sections/common/feature-item';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -74,10 +76,12 @@ export default createSchema({
     video,
     services,
     contact,
+    features,
     // The following are common object components
     link,
     heroItem,
     resource,
     service,
+    featureItem,
   ]),
 });

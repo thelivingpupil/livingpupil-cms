@@ -19,6 +19,7 @@ export default {
       validation: (Rule) => Rule.length(1),
       of: [
         { type: 'contact' },
+        { type: 'features' },
         { type: 'footer' },
         { type: 'header' },
         { type: 'hero' },
