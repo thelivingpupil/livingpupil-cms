@@ -60,6 +60,11 @@ export default {
       title: 'Item Price',
       type: 'number',
     },
+    {
+      name: 'inventory',
+      title: 'Inventory Quantity',
+      type: 'number',
+    },
   ],
   preview: {
     select: {
