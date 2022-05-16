@@ -14,8 +14,30 @@ export default {
     {
       name: 'subtitle',
       title: 'Subtitle',
+      type: 'text',
+    },
+    {
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+    },
+    {
+      name: 'phone',
+      title: 'Phone',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'email',
+      title: 'Email',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
+      name: 'hours',
+      title: 'Business Hours',
+      type: 'array',
+      of: [{ type: 'string' }],
     },
   ],
 };

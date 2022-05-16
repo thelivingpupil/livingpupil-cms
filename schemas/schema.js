@@ -29,6 +29,8 @@ import contact from './objects/page-sections/contact';
 import features from './objects/page-sections/features';
 import offering from './objects/page-sections/offering';
 import blogContent from './objects/page-sections/blog-content';
+import partners from './objects/page-sections/partners';
+import presentation from './objects/page-sections/presentation';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -81,6 +83,8 @@ export default createSchema({
     features,
     offering,
     blogContent,
+    partners,
+    presentation,
     // The following are common object components
     link,
     heroItem,

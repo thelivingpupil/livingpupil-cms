@@ -26,6 +26,8 @@ export default {
         { type: 'hero' },
         { type: 'info' },
         { type: 'offering' },
+        { type: 'partners' },
+        { type: 'presentation' },
         { type: 'richText' },
         { type: 'services' },
         { type: 'video' },
