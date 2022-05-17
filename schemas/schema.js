@@ -31,6 +31,7 @@ import offering from './objects/page-sections/offering';
 import blogContent from './objects/page-sections/blog-content';
 import partners from './objects/page-sections/partners';
 import presentation from './objects/page-sections/presentation';
+import gallery from './objects/page-sections/gallery';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -85,6 +86,7 @@ export default createSchema({
     blogContent,
     partners,
     presentation,
+    gallery,
     // The following are common object components
     link,
     heroItem,

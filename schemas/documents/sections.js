@@ -22,6 +22,7 @@ export default {
         { type: 'contact' },
         { type: 'features' },
         { type: 'footer' },
+        { type: 'gallery' },
         { type: 'header' },
         { type: 'hero' },
         { type: 'info' },
