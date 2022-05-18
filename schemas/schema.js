@@ -32,6 +32,7 @@ import partners from './objects/page-sections/partners';
 import presentation from './objects/page-sections/presentation';
 import gallery from './objects/page-sections/gallery';
 import faq from './objects/page-sections/faq';
+import sectionTitle from './objects/page-sections/section-title';
 
 // Payment Terms
 import annual from './objects/payment-terms/annual';
@@ -88,6 +89,7 @@ export default createSchema({
     presentation,
     gallery,
     faq,
+    sectionTitle,
     // The following are common object components
     link,
     heroItem,

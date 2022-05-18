@@ -31,6 +31,7 @@ export default {
         { type: 'partners' },
         { type: 'presentation' },
         { type: 'richText' },
+        { type: 'sectionTitle' },
         { type: 'services' },
         { type: 'video' },
       ],
