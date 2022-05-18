@@ -30,6 +30,7 @@ export default {
         { type: 'offering' },
         { type: 'partners' },
         { type: 'presentation' },
+        { type: 'review' },
         { type: 'richText' },
         { type: 'sectionTitle' },
         { type: 'services' },
