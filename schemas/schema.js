@@ -7,7 +7,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // We import document schemas
 import pages from './documents/pages';
 import sections from './documents/sections';
-import curriculum from './documents/curriculum';
 import courses from './documents/courses';
 import gradeTypes from './documents/grade-types';
 import shopItems from './documents/shop-items';
@@ -62,7 +61,6 @@ export default createSchema({
     // in the studio.
     pages,
     sections,
-    curriculum,
     gradeTypes,
     courses,
     schoolFees,

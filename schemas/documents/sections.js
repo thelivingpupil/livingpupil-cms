@@ -2,7 +2,7 @@ import { FaWindowRestore } from 'react-icons/fa';
 
 export default {
   name: 'sections',
-  title: 'Sections',
+  title: 'Website Page Sections',
   type: 'document',
   icon: FaWindowRestore,
   fields: [
