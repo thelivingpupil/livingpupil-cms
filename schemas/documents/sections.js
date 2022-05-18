@@ -20,6 +20,7 @@ export default {
       of: [
         { type: 'blogContent' },
         { type: 'contact' },
+        { type: 'faq' },
         { type: 'features' },
         { type: 'footer' },
         { type: 'gallery' },
