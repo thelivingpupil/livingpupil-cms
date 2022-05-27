@@ -12,6 +12,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'image',
+      title: 'Picture',
+      type: 'image',
+    },
+    {
       name: 'review',
       title: 'Review',
       type: 'text',
