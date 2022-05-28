@@ -39,7 +39,6 @@ import review from './objects/page-sections/review';
 import annual from './objects/payment-terms/annual';
 import semiAnnual from './objects/payment-terms/semi-annual';
 import quarterly from './objects/payment-terms/quarterly';
-import monthly from './objects/payment-terms/monthly';
 
 // Lessons
 import lesson from './objects/lessons/lesson';
@@ -75,7 +74,6 @@ export default createSchema({
     annual,
     semiAnnual,
     quarterly,
-    monthly,
     lesson,
     header,
     footer,

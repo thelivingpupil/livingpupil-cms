@@ -27,16 +27,16 @@ export default {
       type: 'array',
       of: [{ type: 'gradeLevels' }],
     },
-    {
-      name: 'payment',
-      title: 'Payment',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [{ type: 'schoolFees' }],
-        },
-      ],
-    },
+    // {
+    //   name: 'payment',
+    //   title: 'Payment',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       type: 'reference',
+    //       to: [{ type: 'schoolFees' }],
+    //     },
+    //   ],
+    // },
   ],
 };
