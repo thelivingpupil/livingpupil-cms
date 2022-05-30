@@ -34,6 +34,7 @@ export default {
         { type: 'richText' },
         { type: 'sectionTitle' },
         { type: 'services' },
+        { type: 'subjects' },
         { type: 'video' },
       ],
     },
