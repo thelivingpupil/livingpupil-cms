@@ -27,6 +27,12 @@ export default {
       },
     },
     {
+      name: 'categories',
+      title: 'Category',
+      type: 'array',
+      of: [{ type: 'string' }],
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',
