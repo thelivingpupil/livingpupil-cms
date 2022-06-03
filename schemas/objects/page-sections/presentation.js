@@ -20,7 +20,13 @@ export default {
     },
     {
       name: 'video',
-      title: 'Video',
+      title: 'Video #1',
+      type: 'resource',
+      group: 'video',
+    },
+    {
+      name: 'secondaryVideo',
+      title: 'Video #2',
       type: 'resource',
       group: 'video',
     },
