@@ -8,6 +8,7 @@ const accreditationList = [
   'DUAL',
   'FORM_ONE',
   'FORM_TWO',
+  'FORM_THREE',
 ];
 const gradesList = [
   'PRESCHOOL',
