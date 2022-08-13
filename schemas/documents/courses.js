@@ -1,22 +1,21 @@
 import { FaCertificate } from 'react-icons/fa';
 
 const gradesList = [
-  'ALL',
-  'PRESCHOOL',
-  'K1',
-  'K2',
-  'GRADE_1',
-  'GRADE_2',
-  'GRADE_3',
-  'GRADE_4',
-  'GRADE_5',
-  'GRADE_6',
-  'GRADE_7',
-  'GRADE_8',
-  'GRADE_9',
-  'GRADE_10',
-  'GRADE_11',
-  'GRADE_12',
+  { title: 'Pre-School', value: 'PRESCHOOL' },
+  { title: 'K1', value: 'K1' },
+  { title: 'K2', value: 'K2' },
+  { title: 'Grade 1', value: 'GRADE_1' },
+  { title: 'Grade 2', value: 'GRADE_2' },
+  { title: 'Grade 3', value: 'GRADE_3' },
+  { title: 'Grade 4', value: 'GRADE_4' },
+  { title: 'Grade 5', value: 'GRADE_5' },
+  { title: 'Grade 6', value: 'GRADE_6' },
+  { title: 'Grade 7', value: 'GRADE_7' },
+  { title: 'Grade 8', value: 'GRADE_8' },
+  { title: 'Grade 9', value: 'GRADE_9' },
+  { title: 'Grade 10', value: 'GRADE_10' },
+  { title: 'Grade 11', value: 'GRADE_11' },
+  { title: 'Grade 12', value: 'GRADE_12' },
 ];
 
 export default {
@@ -33,8 +32,12 @@ export default {
     {
       name: 'gradeLevel',
       title: 'Applicable Grade Level',
-      type: 'string',
-      options: { list: gradesList },
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'grid',
+        list: gradesList,
+      },
     },
     {
       name: 'title',
