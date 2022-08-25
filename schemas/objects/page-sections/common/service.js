@@ -30,6 +30,16 @@ export default {
       title: 'Description',
       type: 'text',
     },
+    {
+      name: 'path',
+      title: 'URL',
+      type: 'url',
+      validation: (Rule) =>
+        Rule.uri({
+          allowRelative: true,
+          relativeOnly: false,
+        }),
+    },
   ],
   initialValue: {
     hasIcon: false,
