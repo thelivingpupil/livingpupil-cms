@@ -18,6 +18,11 @@ const gradesList = [
   { title: 'Grade 12', value: 'GRADE_12' },
 ];
 
+const curriculum = [
+  { title: 'Homeschool Program', value: 'HOMESCHOOL_PROGRAM' },
+  { title: 'Homeschool Cottage', value: 'HOMESCHOOL_COTTAGE' },
+];
+
 export default {
   name: 'courses',
   title: 'Courses',
@@ -28,6 +33,16 @@ export default {
       name: 'code',
       title: 'Course Code',
       type: 'string',
+    },
+    {
+      name: 'curriculum',
+      title: 'Applicable Curriculum',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'grid',
+        list: curriculum,
+      },
     },
     {
       name: 'gradeLevel',
