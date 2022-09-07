@@ -11,6 +11,7 @@ import courses from './documents/courses';
 import gradeTypes from './documents/grade-types';
 import shopItems from './documents/shop-items';
 import schoolFees from './documents/school-fees';
+import discounts from './documents/discounts';
 // We import object schemas
 
 // Grade Levels
@@ -71,6 +72,7 @@ export default createSchema({
     courses,
     schoolFees,
     shopItems,
+    discounts,
     // The following are object types which will appear
     // in the studio.
     hero,
