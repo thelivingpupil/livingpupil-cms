@@ -35,5 +35,13 @@ export default {
       title: 'Description',
       type: 'text',
     },
+    {
+      name: 'count',
+      title: 'Inventory Count',
+      type: 'number',
+    },
   ],
+  initialValue: {
+    count: 0,
+  },
 };
