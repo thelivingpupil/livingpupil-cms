@@ -1,4 +1,4 @@
-import { BsFillCalendarEventFill } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const eventTypes = [
   { title: 'Online', value: 'ONLINE' },
@@ -9,7 +9,7 @@ export default {
   name: 'events',
   title: 'Events',
   type: 'document',
-  icon: BsFillCalendarEventFill,
+  icon: FaCalendarAlt,
   fields: [
     {
       name: 'poster',
