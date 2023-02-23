@@ -12,6 +12,11 @@ export default {
   icon: FaCalendarAlt,
   fields: [
     {
+      name: 'title',
+      title: 'Event Title',
+      type: 'string',
+    },
+    {
       name: 'poster',
       title: 'Event Poster',
       type: 'image',
@@ -43,16 +48,28 @@ export default {
     {
       name: 'dateandtime',
       title: 'Date and Time',
-      type: 'datetime',
+      type: 'array',
+      of: [
+        {
+          type: 'datetime',
+          options: {
+            timeFormat: 'HH:mm A',
+          },
+        },
+      ],
     },
     {
-      name: 'type',
+      name: 'types',
       title: 'Event Type',
-      type: 'string',
-      initialValue: 'ONLINE',
-      options: {
-        list: eventTypes,
-      },
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+          options: {
+            list: eventTypes,
+          },
+        },
+      ],
     },
     {
       name: 'joiners',
