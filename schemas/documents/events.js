@@ -53,6 +53,7 @@ export default {
         {
           type: 'datetime',
           options: {
+            dateFormat: 'MM/DD/YYYY',
             timeFormat: 'HH:mm A',
           },
         },
