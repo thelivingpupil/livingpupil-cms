@@ -97,4 +97,14 @@ export default {
         }),
     },
   ],
+  preview: {
+    select: {
+      title: 'title',
+      poster: 'poster',
+    },
+    prepare: (selection) => ({
+      title: selection.title,
+      media: selection.poster,
+    }),
+  },
 };
