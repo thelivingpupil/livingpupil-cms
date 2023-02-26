@@ -29,10 +29,13 @@ export default {
       thirdPayment: 'thirdPayment',
     },
     prepare: (selection) => ({
-      title: `Down Payment: ${new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'PHP',
-      }).format(selection.downPayment)} + 2nd Payment: ${new Intl.NumberFormat(
+      title: `Three (3) Term Payment -- Down Payment: ${new Intl.NumberFormat(
+        'en-US',
+        {
+          style: 'currency',
+          currency: 'PHP',
+        }
+      ).format(selection.downPayment)} + 2nd Payment: ${new Intl.NumberFormat(
         'en-US',
         {
           style: 'currency',
