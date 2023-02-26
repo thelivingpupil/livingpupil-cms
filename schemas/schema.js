@@ -13,6 +13,7 @@ import shopItems from './documents/shop-items';
 import schoolFees from './documents/school-fees';
 import discounts from './documents/discounts';
 import events from './documents/events';
+import programs from './documents/programs';
 // We import object schemas
 
 // Grade Levels
@@ -43,6 +44,12 @@ import process from './objects/page-sections/process';
 import annual from './objects/payment-terms/annual';
 import semiAnnual from './objects/payment-terms/semi-annual';
 import quarterly from './objects/payment-terms/quarterly';
+import fullTermPayment from './objects/payment-terms/full';
+import threeTermPayment from './objects/payment-terms/three-term';
+import fourTermPayment from './objects/payment-terms/four-term';
+
+// tuition-fee
+import tuitionFee from './objects/tuition-fee/tuition-fee';
 
 // Lessons
 import lesson from './objects/lessons/lesson';
@@ -75,13 +82,18 @@ export default createSchema({
     shopItems,
     discounts,
     events,
+    programs,
     // The following are object types which will appear
     // in the studio.
     hero,
     gradeLevels,
+    tuitionFee,
     annual,
     semiAnnual,
     quarterly,
+    fullTermPayment,
+    threeTermPayment,
+    fourTermPayment,
     lesson,
     header,
     footer,
