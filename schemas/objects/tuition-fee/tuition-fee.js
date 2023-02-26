@@ -15,15 +15,10 @@ export default {
     {
       name: 'type',
       title: 'Tuition Fee Type',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-          options: {
-            list: tuitioFeeTypes,
-          },
-        },
-      ],
+      type: 'string',
+      options: {
+        list: tuitioFeeTypes,
+      },
     },
     {
       name: 'paymentTerms',
