@@ -62,6 +62,11 @@ export default {
       },
     },
     {
+      name: 'subheading',
+      title: 'Subheading',
+      type: 'string',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',
