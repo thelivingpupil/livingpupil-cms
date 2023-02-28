@@ -10,6 +10,11 @@ const enrollmentTypes = [
   { title: 'Continuing', value: 'CONTINUING' },
 ];
 
+const cottageTypes = [
+  { title: '3 days a week', value: 'THREE_DAYS_A_WEEK' },
+  { title: 'with 2 days tutor', value: 'WITH_TWO_DAYS_TUTOR' },
+];
+
 const gradeLevelTypes = [
   { title: 'Preschool', value: 'PRESCHOOL' },
   { title: 'Kindergarten 1', value: 'K1' },
@@ -43,6 +48,14 @@ export default {
       type: 'string',
       options: {
         list: programTypes,
+      },
+    },
+    {
+      name: 'cottageType',
+      title: 'Cottage Program',
+      type: 'string',
+      options: {
+        list: cottageTypes,
       },
     },
     {
