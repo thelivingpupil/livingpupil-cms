@@ -48,4 +48,14 @@ export default {
       type: 'file',
     },
   ],
+  preview: {
+    select: {
+      title: 'bookTitle',
+      cover: 'bookCover',
+    },
+    prepare: (selection) => ({
+      title: selection.title,
+      media: selection.cover,
+    }),
+  },
 };
