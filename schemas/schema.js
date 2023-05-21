@@ -15,6 +15,7 @@ import discounts from './documents/discounts';
 import events from './documents/events';
 import programs from './documents/programs';
 import books from './documents/books';
+import lessonPlan from './documents/lesson-plan';
 // We import object schemas
 
 // Grade Levels
@@ -85,6 +86,7 @@ export default createSchema({
     events,
     programs,
     books,
+    lessonPlan,
     // The following are object types which will appear
     // in the studio.
     hero,
