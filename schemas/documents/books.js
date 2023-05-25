@@ -17,6 +17,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'bookDescription',
+      title: 'Book Description',
+      type: 'string',
+    },
+    {
       name: 'bookFor',
       title: 'Book For',
       type: 'string',
