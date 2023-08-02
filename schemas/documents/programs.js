@@ -12,7 +12,7 @@ const enrollmentTypes = [
 
 const cottageTypes = [
   { title: '3 days a week', value: 'THREE_DAYS_A_WEEK' },
-  { title: 'with 2 days tutor', value: 'WITH_TWO_DAYS_TUTOR' },
+  { title: '5 days a week', value: 'FIVE_DAYS_A_WEEK' },
 ];
 
 const gradeLevelTypes = [
