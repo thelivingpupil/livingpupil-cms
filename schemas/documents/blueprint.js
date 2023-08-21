@@ -7,6 +7,11 @@ const formLevelTypes = [
   { title: 'Form 3', value: 'FORM_3' },
 ];
 
+const programTypes = [
+  { title: 'Homeschool Program', value: 'HOMESCHOOL_PROGRAM' },
+  { title: 'Homeschool Cottage', value: 'HOMESCHOOL_COTTAGE' },
+];
+
 export default {
   name: 'blueprints',
   title: 'Lesson Blueprint',
@@ -19,6 +24,14 @@ export default {
       type: 'string',
       options: {
         list: formLevelTypes,
+      },
+    },
+    {
+      name: 'programType',
+      title: 'Program Type',
+      type: 'string',
+      options: {
+        list: programTypes,
       },
     },
     {

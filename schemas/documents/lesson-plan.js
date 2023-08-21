@@ -13,6 +13,11 @@ const gradeLevelTypes = [
   { title: 'Grade 10', value: 'GRADE_10' },
 ];
 
+const programTypes = [
+  { title: 'Homeschool Program', value: 'HOMESCHOOL_PROGRAM' },
+  { title: 'Homeschool Cottage', value: 'HOMESCHOOL_COTTAGE' },
+];
+
 export default {
   name: 'lessonPlans',
   title: 'Lesson Plans',
@@ -25,6 +30,14 @@ export default {
       type: 'string',
       options: {
         list: gradeLevelTypes,
+      },
+    },
+    {
+      name: 'programType',
+      title: 'Program Type',
+      type: 'string',
+      options: {
+        list: programTypes,
       },
     },
     {
