@@ -49,9 +49,10 @@ export default {
   preview: {
     select: {
       grade: 'gradeLevel',
+      program: 'programType',
     },
     prepare: (selection) => ({
-      title: selection.grade,
+      title: `${selection.program || 'Both'} - ${selection.grade}`,
     }),
   },
 };

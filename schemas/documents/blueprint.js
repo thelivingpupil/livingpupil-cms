@@ -43,9 +43,10 @@ export default {
   preview: {
     select: {
       form: 'formLevel',
+      program: 'programType',
     },
     prepare: (selection) => ({
-      title: selection.form,
+      title: `${selection.program || 'Both'} - ${selection.form}`,
     }),
   },
 };
