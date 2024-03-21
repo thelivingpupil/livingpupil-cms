@@ -15,7 +15,34 @@ export default {
       name: 'items',
       title: 'Gallery Items',
       type: 'array',
-      of: [{ type: 'image' }],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'title',
+              title: 'Item Title',
+              type: 'string',
+            },
+            {
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+            },
+            {
+              name: 'cover',
+              title: 'Cover Photo',
+              type: 'image',
+            },
+            {
+              name: 'images',
+              title: 'Images',
+              type: 'array',
+              of: [{ type: 'image' }],
+            },
+          ],
+        },
+      ],
     },
   ],
 };
