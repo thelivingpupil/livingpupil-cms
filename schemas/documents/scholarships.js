@@ -6,8 +6,8 @@ const scholarshipTypes = [
 ];
 
 export default {
-  name: 'discounts',
-  title: 'Discounts',
+  name: 'scholarships',
+  title: 'Scholarships',
   type: 'document',
   icon: FaPercent,
   fields: [
