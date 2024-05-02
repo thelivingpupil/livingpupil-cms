@@ -12,6 +12,7 @@ import gradeTypes from './documents/grade-types';
 import shopItems from './documents/shop-items';
 import schoolFees from './documents/school-fees';
 import discounts from './documents/discounts';
+import scholarships from './documents/scholarships';
 import events from './documents/events';
 import programs from './documents/programs';
 import books from './documents/books';
@@ -83,6 +84,7 @@ export default createSchema({
     courses,
     schoolFees,
     shopItems,
+    scholarships,
     discounts,
     events,
     programs,
