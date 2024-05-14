@@ -28,6 +28,7 @@ export default {
         { type: 'fullTermPayment' },
         { type: 'threeTermPayment' },
         { type: 'fourTermPayment' },
+        { type: 'eightTermPayment' },
       ],
     },
   ],

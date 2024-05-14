@@ -51,6 +51,8 @@ import quarterly from './objects/payment-terms/quarterly';
 import fullTermPayment from './objects/payment-terms/full';
 import threeTermPayment from './objects/payment-terms/three-term';
 import fourTermPayment from './objects/payment-terms/four-term';
+import monthly from './objects/payment-terms/monthly';
+import eightTermPayment from './objects/payment-terms/eight-term';
 
 // tuition-fee
 import tuitionFee from './objects/tuition-fee/tuition-fee';
@@ -102,6 +104,8 @@ export default createSchema({
     fullTermPayment,
     threeTermPayment,
     fourTermPayment,
+    monthly,
+    eightTermPayment,
     lesson,
     header,
     footer,

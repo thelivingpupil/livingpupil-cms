@@ -67,7 +67,7 @@ export default {
       name: 'fees',
       title: 'Applicable Fees',
       type: 'array',
-      of: [{ type: 'annual' }, { type: 'semiAnnual' }, { type: 'quarterly' }],
+      of: [{ type: 'annual' }, { type: 'semiAnnual' }, { type: 'quarterly' }, { type: 'monthly' }],
     },
   ],
   preview: {
