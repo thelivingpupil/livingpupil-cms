@@ -12,42 +12,42 @@ export default {
             type: 'number',
         },
         {
-            name: 'term2Payment',
+            name: 'secondPayment',
             title: '2nd Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term3Payment',
+            name: 'thirdPayment',
             title: '3rd Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term4Payment',
+            name: 'fourthPayment',
             title: '4th Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term5Payment',
+            name: 'fifthPayment',
             title: '5th Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term6Payment',
+            name: 'sixthPayment',
             title: '6th Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term7Payment',
+            name: 'seventhPayment',
             title: '7th Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term8Payment',
+            name: 'eighthPayment',
             title: '8th Term Payment Fee',
             type: 'number',
         },
         {
-            name: 'term9Payment',
+            name: 'ninthPayment',
             title: '9th Term Payment Fee',
             type: 'number',
         },
@@ -61,7 +61,7 @@ export default {
             term5Payment: 'fifthPayment',
             term6Payment: 'sixthPayment',
             term7Payment: 'seventhPayment',
-            term8Payment: 'eigthPayment',
+            term8Payment: 'eighthPayment',
             term9Payment: 'ninthPayment',
         },
         prepare: (selection) => ({
@@ -124,9 +124,9 @@ export default {
                 style: 'currency',
                 currency: 'PHP',
             }).format(
-                selection.downPayment + selection.term2Payment + selection.term3Payment +
-                selection.term4Payment + selection.term5Payment + selection.term6Payment +
-                selection.term7Payment + selection.term8Payment + selection.term9Payment
+                selection.downPayment + selection.secondPayment + selection.thirdPayment +
+                selection.fourthPayment + selection.fifthPayment + selection.sixthPayment +
+                selection.seventhPayment + selection.eightPayment + selection.ninthPayment
             )}`,
         }),
     },
