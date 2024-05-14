@@ -55,14 +55,14 @@ export default {
     preview: {
         select: {
             downPayment: 'downPayment',
-            term2Payment: 'secondPayment',
-            term3Payment: 'thirdPayment',
-            term4Payment: 'fourthPayment',
-            term5Payment: 'fifthPayment',
-            term6Payment: 'sixthPayment',
-            term7Payment: 'seventhPayment',
-            term8Payment: 'eighthPayment',
-            term9Payment: 'ninthPayment',
+            secondPayment: 'secondPayment',
+            thirdPayment: 'thirdPayment',
+            fourthPayment: 'fourthPayment',
+            fifthPayment: 'fifthPayment',
+            sixthPayment: 'sixthPayment',
+            seventhPayment: 'seventhPayment',
+            eightPayment: 'eighthPayment',
+            ninthPayment: 'ninthPayment',
         },
         prepare: (selection) => ({
             title: `Nine Term Payment -- Down Payment: ${new Intl.NumberFormat(
@@ -77,49 +77,49 @@ export default {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term2Payment)} + 3rd Term: ${new Intl.NumberFormat(
+            ).format(selection.secondPayment)} + 3rd Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term3Payment)} + 4th Term: ${new Intl.NumberFormat(
+            ).format(selection.thirdPayment)} + 4th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term4Payment)} + 5th Term: ${new Intl.NumberFormat(
+            ).format(selection.fourthPayment)} + 5th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term5Payment)} + 6th Term: ${new Intl.NumberFormat(
+            ).format(selection.fifthPayment)} + 6th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term6Payment)} + 7th Term: ${new Intl.NumberFormat(
+            ).format(selection.sixthPayment)} + 7th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term7Payment)} + 8th Term: ${new Intl.NumberFormat(
+            ).format(selection.seventhPayment)} + 8th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term8Payment)} + 9th Term: ${new Intl.NumberFormat(
+            ).format(selection.eightPayment)} + 9th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.term9Payment)}`,
+            ).format(selection.ninthPayment)}`,
             subtitle: `Total: ${new Intl.NumberFormat('en-US', {
                 style: 'currency',
                 currency: 'PHP',
