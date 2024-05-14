@@ -33,7 +33,7 @@ export default {
             subtitle: `Total: ${new Intl.NumberFormat('en-US', {
                 style: 'currency',
                 currency: 'PHP',
-            }).format(selection.fee + selection.staggered * 7)}`,
+            }).format(selection.fee + selection.staggered * 8)}`,
         }),
     },
 };
