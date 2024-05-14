@@ -55,14 +55,14 @@ export default {
     preview: {
         select: {
             downPayment: 'downPayment',
-            term2Payment: 'term2Payment',
-            term3Payment: 'term3Payment',
-            term4Payment: 'term4Payment',
-            term5Payment: 'term5Payment',
-            term6Payment: 'term6Payment',
-            term7Payment: 'term7Payment',
-            term8Payment: 'term8Payment',
-            term9Payment: 'term9Payment',
+            term2Payment: 'secondPayment',
+            term3Payment: 'thirdPayment',
+            term4Payment: 'fourthPayment',
+            term5Payment: 'fifthPayment',
+            term6Payment: 'sixthPayment',
+            term7Payment: 'seventhPayment',
+            term8Payment: 'eigthPayment',
+            term9Payment: 'ninthPayment',
         },
         prepare: (selection) => ({
             title: `Nine Term Payment -- Down Payment: ${new Intl.NumberFormat(
