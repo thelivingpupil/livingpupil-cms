@@ -113,7 +113,7 @@ export default {
                     style: 'currency',
                     currency: 'PHP',
                 }
-            ).format(selection.eightPayment)} + 9th Term: ${new Intl.NumberFormat(
+            ).format(selection.eighthPayment)} + 9th Term: ${new Intl.NumberFormat(
                 'en-US',
                 {
                     style: 'currency',
@@ -126,7 +126,7 @@ export default {
             }).format(
                 selection.downPayment + selection.secondPayment + selection.thirdPayment +
                 selection.fourthPayment + selection.fifthPayment + selection.sixthPayment +
-                selection.seventhPayment + selection.eightPayment + selection.ninthPayment
+                selection.seventhPayment + selection.eighthPayment + selection.ninthPayment
             )}`,
         }),
     },
