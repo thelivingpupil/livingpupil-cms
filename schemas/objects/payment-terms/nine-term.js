@@ -2,7 +2,7 @@ import { FaCalendarAlt } from 'react-icons/fa';
 
 export default {
     name: 'nineTermPayment',
-    title: 'Nine Term Payment',
+    title: 'Nine (9) Term Payment',
     type: 'object',
     icon: FaCalendarAlt,
     fields: [
