@@ -61,7 +61,7 @@ export default {
             fifthPayment: 'fifthPayment',
             sixthPayment: 'sixthPayment',
             seventhPayment: 'seventhPayment',
-            eightPayment: 'eighthPayment',
+            eighthPayment: 'eighthPayment',
             ninthPayment: 'ninthPayment',
         },
         prepare: (selection) => ({
