@@ -8,6 +8,8 @@ const formLevelTypes = [
 ];
 
 const gradeLevelTypes = [
+  { title: 'Kinder 1', value: 'KINDER_1' },
+  { title: 'Kinder 2', value: 'KINDER_2' },
   { title: 'Grade 1', value: 'GRADE_1' },
   { title: 'Grade 2', value: 'GRADE_2' },
   { title: 'Grade 3', value: 'GRADE_3' },
@@ -18,6 +20,8 @@ const gradeLevelTypes = [
   { title: 'Grade 8', value: 'GRADE_8' },
   { title: 'Grade 9', value: 'GRADE_9' },
   { title: 'Grade 10', value: 'GRADE_10' },
+  { title: 'Grade 11', value: 'GRADE_11' },
+  { title: 'Grade 12', value: 'GRADE_12' },
 ];
 
 const programTypes = [
