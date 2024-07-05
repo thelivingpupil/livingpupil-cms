@@ -1,6 +1,8 @@
 import { FaClipboardList } from 'react-icons/fa';
 
 const gradeLevelTypes = [
+  { title: 'Kindergarten 1', value: 'KINDERGARTEN_1' },
+  { title: 'Kindergarten 2', value: 'KINDERGARTEN_2' },
   { title: 'Grade 1', value: 'GRADE_1' },
   { title: 'Grade 2', value: 'GRADE_2' },
   { title: 'Grade 3', value: 'GRADE_3' },
