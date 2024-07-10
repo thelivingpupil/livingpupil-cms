@@ -8,8 +8,8 @@ const formLevelTypes = [
 ];
 
 const gradeLevelTypes = [
-  { title: 'Kinder 1', value: 'KINDER_1' },
-  { title: 'Kinder 2', value: 'KINDER_2' },
+  { title: 'Kinder 1', value: 'K1' },
+  { title: 'Kinder 2', value: 'K2' },
   { title: 'Grade 1', value: 'GRADE_1' },
   { title: 'Grade 2', value: 'GRADE_2' },
   { title: 'Grade 3', value: 'GRADE_3' },
