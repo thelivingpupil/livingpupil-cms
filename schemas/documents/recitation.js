@@ -44,7 +44,7 @@ export default {
         },
         {
             name: 'recitaionFile',
-            title: 'Rectation File',
+            title: 'Recitation File',
             type: 'file',
         },
     ],
