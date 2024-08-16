@@ -40,6 +40,11 @@ export default {
       ],
     },
     {
+      name: 'eventFile',
+      title: 'Event File',
+      type: 'file',
+    },
+    {
       name: 'description',
       title: 'Event Description',
       type: 'array',
