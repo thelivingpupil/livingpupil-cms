@@ -23,6 +23,11 @@ const curriculum = [
   { title: 'Homeschool Cottage', value: 'HOMESCHOOL_COTTAGE' },
 ];
 
+const schoolYear = [
+  { title: '2024-2025', value: "2024-2025" },
+  { title: '2025-2026', value: "2025-2026" },
+];
+
 export default {
   name: 'courses',
   title: 'Courses',
@@ -33,6 +38,14 @@ export default {
       name: 'code',
       title: 'Course Code',
       type: 'string',
+    },
+    {
+      name: 'schoolYear',
+      title: 'School Year',
+      type: 'string',
+      options: {
+        list: schoolYear,
+      },
     },
     {
       name: 'curriculum',

@@ -29,6 +29,11 @@ const programTypes = [
   { title: 'Homeschool Cottage', value: 'HOMESCHOOL_COTTAGE' },
 ];
 
+const schoolYear = [
+  { title: '2024-2025', value: "2024-2025" },
+  { title: '2025-2026', value: "2025-2026" },
+];
+
 export default {
   name: 'blueprints',
   title: 'Lesson Blueprint',
@@ -43,6 +48,14 @@ export default {
     //     list: formLevelTypes,
     //   },
     // },
+    {
+      name: 'schoolYear',
+      title: 'School Year',
+      type: 'string',
+      options: {
+        list: schoolYear,
+      },
+    },
     {
       name: 'gradeLevel',
       title: 'Grade Level',
