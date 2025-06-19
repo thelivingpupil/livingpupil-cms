@@ -21,6 +21,7 @@ import blueprint from './documents/blueprint';
 import booklist from './documents/booklist';
 import recitation from './documents/recitation';
 import commonSubjects from './documents/common-subjects';
+import scienceExperiment from './documents/experiment';
 // We import object schemas
 
 // Grade Levels
@@ -99,6 +100,7 @@ export default createSchema({
     booklist,
     recitation,
     commonSubjects,
+    scienceExperiment,
     // The following are object types which will appear
     // in the studio.
     hero,
