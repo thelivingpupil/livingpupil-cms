@@ -61,6 +61,11 @@ export default {
       title: 'Lesson Plan File',
       type: 'file',
     },
+    {
+      name: 'dailyLessonPlanFile',
+      title: 'Daily Lesson Plan File',
+      type: 'file',
+    },
   ],
   preview: {
     select: {
