@@ -18,6 +18,7 @@ import programs from './documents/programs';
 import books from './documents/books';
 import lessonPlan from './documents/lesson-plan';
 import blueprint from './documents/blueprint';
+import narrationGuide from './documents/narration-guide';
 import booklist from './documents/booklist';
 import recitation from './documents/recitation';
 import commonSubjects from './documents/common-subjects';
@@ -97,6 +98,7 @@ export default createSchema({
     books,
     lessonPlan,
     blueprint,
+    narrationGuide,
     booklist,
     recitation,
     commonSubjects,
