@@ -1,5 +1,12 @@
 import { FaBookReader } from 'react-icons/fa';
 
+const formLevelTypes = [
+  { title: 'Kinder', value: 'KINDER' },
+  { title: 'Form 1', value: 'FORM_1' },
+  { title: 'Form 2', value: 'FORM_2' },
+  { title: 'Form 3', value: 'FORM_3' },
+];
+
 const gradeLevelTypes = [
   { title: 'Kinder 1', value: 'K1' },
   { title: 'Kinder 2', value: 'K2' },
@@ -15,6 +22,12 @@ const gradeLevelTypes = [
   { title: 'Grade 10', value: 'GRADE_10' },
   { title: 'Grade 11', value: 'GRADE_11' },
   { title: 'Grade 12', value: 'GRADE_12' },
+];
+
+const targetingModes = [
+  { title: 'Single Grade', value: 'SINGLE_GRADE' },
+  { title: 'Multiple Grades', value: 'MULTIPLE_GRADES' },
+  { title: 'Form', value: 'FORM' },
 ];
 
 const programTypes = [
@@ -43,20 +56,72 @@ export default {
       },
     },
     {
-      name: 'gradeLevel',
-      title: 'Grade Level',
-      type: 'string',
-      options: {
-        list: gradeLevelTypes,
-      },
-    },
-    {
       name: 'programType',
       title: 'Program Type',
       type: 'string',
       options: {
         list: programTypes,
       },
+    },
+    {
+      name: 'targetingMode',
+      title: 'Targeting Mode',
+      type: 'string',
+      options: {
+        list: targetingModes,
+        layout: 'radio',
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'gradeLevel',
+      title: 'Grade Level',
+      type: 'string',
+      hidden: ({ document }) => document?.targetingMode !== 'SINGLE_GRADE',
+      options: {
+        list: gradeLevelTypes,
+      },
+      validation: (Rule) =>
+        Rule.custom((value, context) => {
+          if (context.document?.targetingMode === 'SINGLE_GRADE' && !value) {
+            return 'Select a grade level';
+          }
+          return true;
+        }),
+    },
+    {
+      name: 'gradeLevels',
+      title: 'Grade Levels',
+      type: 'array',
+      of: [{ type: 'string' }],
+      hidden: ({ document }) => document?.targetingMode !== 'MULTIPLE_GRADES',
+      options: {
+        layout: 'grid',
+        list: gradeLevelTypes,
+      },
+      validation: (Rule) =>
+        Rule.custom((value, context) => {
+          if (context.document?.targetingMode === 'MULTIPLE_GRADES' && (!value || value.length === 0)) {
+            return 'Select at least one grade level';
+          }
+          return true;
+        }),
+    },
+    {
+      name: 'formLevel',
+      title: 'Form Level',
+      type: 'string',
+      hidden: ({ document }) => document?.targetingMode !== 'FORM',
+      options: {
+        list: formLevelTypes,
+      },
+      validation: (Rule) =>
+        Rule.custom((value, context) => {
+          if (context.document?.targetingMode === 'FORM' && !value) {
+            return 'Select a form level';
+          }
+          return true;
+        }),
     },
     {
       name: 'narrationGuideFile',
@@ -66,11 +131,24 @@ export default {
   ],
   preview: {
     select: {
+      targetingMode: 'targetingMode',
       grade: 'gradeLevel',
+      grades: 'gradeLevels',
+      form: 'formLevel',
       program: 'programType',
     },
-    prepare: (selection) => ({
-      title: `${selection.program || 'Both'} - ${selection.grade}`,
-    }),
+    prepare: (selection) => {
+      let levelLabel = '';
+      if (selection.targetingMode === 'FORM') {
+        levelLabel = selection.form;
+      } else if (selection.targetingMode === 'MULTIPLE_GRADES') {
+        levelLabel = selection.grades?.join(', ') || 'Multiple';
+      } else {
+        levelLabel = selection.grade;
+      }
+      return {
+        title: `${selection.program || 'Both'} - ${levelLabel}`,
+      };
+    },
   },
 };
