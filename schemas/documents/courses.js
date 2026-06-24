@@ -84,6 +84,11 @@ export default {
       type: 'url',
     },
     {
+      name: 'courseFile',
+      title: 'Course File',
+      type: 'file',
+    },
+    {
       name: 'lessons',
       title: 'Lessons',
       type: 'array',
