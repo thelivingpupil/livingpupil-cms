@@ -29,6 +29,12 @@ const schoolYear = [
   { title: '2026-2027', value: "2026-2027" },
 ];
 
+const partnerSchool = [
+  { title: 'Kairos', value: 'KAIROS' },
+  { title: 'Mandaue Christian School', value: 'MANDAUE_CHRISTIAN_SCHOOL' },
+  { title: 'Homelife Academy', value: 'HOMELIFE_ACADEMY' },
+];
+
 export default {
   name: 'courses',
   title: 'Courses',
@@ -46,6 +52,14 @@ export default {
       type: 'string',
       options: {
         list: schoolYear,
+      },
+    },
+    {
+      name: 'partnerSchool',
+      title: 'Partner School',
+      type: 'string',
+      options: {
+        list: partnerSchool,
       },
     },
     {
