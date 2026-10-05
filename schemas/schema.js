@@ -14,6 +14,7 @@ import schoolFees from './documents/school-fees';
 import discounts from './documents/discounts';
 import scholarships from './documents/scholarships';
 import events from './documents/events';
+import calendarPage from './documents/calendar-page';
 import programs from './documents/programs';
 import books from './documents/books';
 import lessonPlan from './documents/lesson-plan';
@@ -94,6 +95,7 @@ export default createSchema({
     scholarships,
     discounts,
     events,
+    calendarPage,
     programs,
     books,
     lessonPlan,
