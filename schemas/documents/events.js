@@ -20,10 +20,36 @@ const audienceOptions = [
 ];
 
 const districtOptions = [
-  {title: 'Luzon', value: 'luzon'},
-  {title: 'Cebu', value: 'cebu'},
-  {title: 'Mindanao', value: 'mindanao'},
+  {title: 'All families', value: undefined},
+  {title: 'Luzon (all Luzon districts)', value: 'LUZON'},
+  {title: 'Magiting', value: 'MAGITING'},
+  {title: 'Maharlika', value: 'MAHARLIKA'},
+  {title: 'Bulacan', value: 'BULACAN'},
+  {title: 'Luzon (Greater Manila)', value: 'GREATER_MANILA'},
+  {title: 'Bayani', value: 'BAYANI'},
+  {title: 'Masinag', value: 'MASINAG'},
+  {title: 'Marangal', value: 'MARANGAL'},
+  {title: 'Bicol', value: 'BICOL'},
+  {title: 'Visayas (all Visayas districts)', value: 'VISAYAS'},
+  {title: 'Cebu (North, Central, South, and Visayas)', value: 'CEBU'},
+  {title: 'Cebu South', value: 'CEBU_SOUTH'},
+  {title: 'Cebu North', value: 'CEBU_NORTH'},
+  {title: 'Cebu Central', value: 'CEBU_CENTRAL'},
+  {title: '(Cebu)/Visayas', value: 'CEBU_VISAYAS'},
+  {title: 'Iloilo', value: 'ILOILO'},
+  {title: 'Bohol', value: 'BOHOL'},
+  {title: 'Negros Island', value: 'NEGROS'},
+  {title: 'Leyte', value: 'LEYTE'},
+  {title: 'Mindanao (all Mindanao districts)', value: 'MINDANAO'},
+  {title: 'Davao', value: 'DAVAO'},
+  {title: 'Misamis Occidental', value: 'MISAMIS_OCCIDENTAL'},
+  {title: 'Iligan – Misamis Oriental', value: 'ILIGAN_MISAMIS_ORIENTAL'},
+  {title: 'Zamboanga', value: 'ZAMBOANGA'},
+  {title: 'SOCCSKSARGEN', value: 'SOCCSKSARGEN'},
+  {title: 'Bukidnon – CDO', value: 'BUKIDNON_CDO'},
 ];
+
+const legacyDistrictValues = new Set(['luzon', 'cebu', 'visayas', 'mindanao']);
 
 const areasByDistrict = {
   luzon: [
@@ -274,21 +300,6 @@ export default {
       description: 'Examples: "1:30 PM", "3:00 PM", "12:00 NN".',
     },
     {
-      name: 'dateandtime',
-      title: 'Date and Time',
-      type: 'array',
-      description: 'Still read by the current calendar page.',
-      of: [
-        {
-          type: 'datetime',
-          options: {
-            dateFormat: 'MM/DD/YYYY',
-            timeFormat: 'hh:mm A',
-          },
-        },
-      ],
-    },
-    {
       name: 'types',
       title: 'Event Type',
       type: 'array',
@@ -319,30 +330,22 @@ export default {
       name: 'district',
       title: 'District',
       type: 'string',
-      description: 'Leave empty if this is not a district event.',
+      description: 'Leave empty for all families. An empty district is not saved.',
       options: {
         list: districtOptions,
+        layout: 'dropdown',
       },
       validation: (Rule) =>
-        Rule.custom((district, context) => {
-          if (district && !districtOptions.some((option) => option.value === district)) {
-            return 'Choose Luzon, Cebu, or Mindanao';
-          }
-
-          const area = context.document?.area;
-          if (!area) {
+        Rule.custom((district) => {
+          if (
+            isEmpty(district) ||
+            districtOptions.some((option) => option.value === district) ||
+            legacyDistrictValues.has(district)
+          ) {
             return true;
           }
 
-          if (!district) {
-            return 'Clear Area, or choose a district';
-          }
-
-          if (!areaBelongsToDistrict(district, area)) {
-            return 'Choose an area in the selected district';
-          }
-
-          return true;
+          return 'Choose a district';
         }),
     },
     {
@@ -353,7 +356,7 @@ export default {
       options: {
         list: areaOptions,
       },
-      hidden: ({document}) => !document?.district && !document?.area,
+      hidden: ({document}) => !document?.area && !areasByDistrict[document?.district],
       inputComponent: AreaSelectInput,
       validation: (Rule) =>
         Rule.custom((area, context) => {
@@ -366,7 +369,7 @@ export default {
             return 'Choose a district, or clear this area';
           }
 
-          if (!areaBelongsToDistrict(district, area)) {
+          if (areasByDistrict[district] && !areaBelongsToDistrict(district, area)) {
             return 'Choose an area in the selected district';
           }
 

@@ -72,7 +72,8 @@ export default {
   ],
   initialValue: {
     subtitle: 'Stay connected with our upcoming learning, family, and community activities.',
-    calendarSubscribeLabel: 'Subscribe to the LP Manila Google Calendar',
+    calendarSubscribeLabel: 'Subscribe to the LP Google Calendar',
+    calendarSubscribeUrl: 'https://calendar.google.com/calendar/u/0/r/month/2026/10/1',
     communityTitle: 'Be Part of Our Community',
     communityButtonLabel: 'View Community Events',
     districtTitle: 'Explore District Events',
